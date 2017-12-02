@@ -16,7 +16,7 @@ var similarWizardTemplate = document.querySelector('#similar-wizard-template').c
 
 var getRandomElement = function (array) {
   return Math.floor(Math.random() * array.length);
-}
+};
 
 var getWizard = function (wizard) {
   var wizardElement =similarWizardTemplate.cloneNode(true);
@@ -25,7 +25,7 @@ var getWizard = function (wizard) {
   wizardElement.querySelector('.wizard-eyes').style.fill = wizard.eyesColor;
 
   return wizardElement;
-}
+};
 
 var fragment = document.createDocumentFragment();
 
