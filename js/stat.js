@@ -1,6 +1,6 @@
 'use strict';
 
-var getMaxElement = function(times) {
+var getMaxElement = function (times) {
   var max = -1;
 
   for (var i = 0; i < times.length; i++) {
@@ -12,7 +12,7 @@ var getMaxElement = function(times) {
   return max;
 };
 
-var getColor = function(condition) {
+var getColor = function (condition) {
   if (condition) {
     return 'rgba(255, 0, 0, 1)';
   } else {
@@ -20,7 +20,7 @@ var getColor = function(condition) {
   }
 };
 
-window.renderStatistics = function(ctx, names, times) {
+window.renderStatistics  = function (ctx, names, times) {
 
   ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
   ctx.fillRect(110, 20, 420, 270);
@@ -46,6 +46,6 @@ window.renderStatistics = function(ctx, names, times) {
     ctx.fillText(names[i], INITIAL_X + colonX * i, NAMES_Y);
     ctx.fillText(Math.floor(times[i]), INITIAL_X + colonX * i, INITIAL_Y - (times[i] * step) - LINE_HEIGHT);
     ctx.fillStyle = getColor(names[i] === 'Вы');
-    ctx.fillRect(INITIAL_X + colonX * i, INITIAL_Y - (times[i] *  step), BAR_WIDTH, times[i] * step);
+    ctx.fillRect(INITIAL_X + colonX * i, INITIAL_Y - (times[i] * step), BAR_WIDTH, times[i] * step);
   }
 };
